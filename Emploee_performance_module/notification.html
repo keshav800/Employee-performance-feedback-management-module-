@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Notifications - Atom HR</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Notifications</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="notifications-section">
+      <ul id="notificationList"></ul>
+    </section>
+  </main>
+
+  <script>
+    const notifications = [
+      "🎯 Your goal deadline is approaching!",
+      "📋 New feedback received.",
+      "🔔 Manager reviewed your performance."
+    ];
+
+    const list = document.getElementById("notificationList");
+    notifications.forEach(note => {
+      const li = document.createElement("li");
+      li.textContent = note;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

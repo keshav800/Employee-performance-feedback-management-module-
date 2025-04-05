@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reports - Atom HR</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    header h1 {
+      margin: 0 0 10px 0;
+      color: #00c6ff;
+    }
+
+    nav a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #222;
+      padding: 8px 12px;
+      border-radius: 4px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #00c6ff;
+      color: #000;
+    }
+
+    main {
+      padding: 40px 60px;
+    }
+
+    section {
+      background-color: #111;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      max-width: 600px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #1abc9c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Performance Reports</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="goals.html">Goals</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Goal Completion Rate</h2>
+      <canvas id="goalChart" width="400" height="200"></canvas>
+    </section>
+
+    <section>
+      <h2>Feedback Summary</h2>
+      <canvas id="feedbackChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <script src="js/reports.js"></script>
+</body>
+</html>
